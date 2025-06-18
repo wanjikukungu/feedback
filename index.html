@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form - Tourism Feedback Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="back-link">
+                    <i class="fas fa-arrow-left"></i>
+                    <span>Back to Home</span>
+                </a>
+                <div class="separator"></div>
+                <div class="logo">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h1>Feedback Form</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="form-container">
+        <div class="container">
+            <div class="form-header">
+                <h2>Share Your Experience</h2>
+                <p>Your feedback is valuable to us and helps improve our tourism services</p>
+            </div>
+
+            <form id="feedbackForm" class="feedback-form">
+                <!-- Personal Information -->
+                <div class="form-card">
+                    <div class="card-header">
+                        <h3>Personal Information</h3>
+                        <p>Tell us a bit about yourself</p>
+                    </div>
+                    <div class="card-content">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required placeholder="Enter your email">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="visitDate">Visit Date</label>
+                                <input type="date" id="visitDate" name="visitDate">
+                            </div>
+                            <div class="form-group">
+                                <label for="visitPurpose">Purpose of Visit</label>
+                                <select id="visitPurpose" name="visitPurpose">
+                                    <option value="">Select purpose</option>
+                                    <option value="leisure">Leisure/Vacation</option>
+                                    <option value="business">Business</option>
+                                    <option value="family">Family Visit</option>
+                                    <option value="adventure">Adventure/Sports</option>
+                                    <option value="cultural">Cultural/Historical</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ratings -->
+                <div class="form-card">
+                    <div class="card-header">
+                        <h3>Rate Your Experience</h3>
+                        <p>Please rate different aspects of your visit</p>
+                    </div>
+                    <div class="card-content">
+                        <div class="rating-group">
+                            <label>Overall Experience *</label>
+                            <div class="star-rating" data-rating="overallRating">
+                                <i class="fas fa-star" data-value="1"></i>
+                                <i class="fas fa-star" data-value="2"></i>
+                                <i class="fas fa-star" data-value="3"></i>
+                                <i class="fas fa-star" data-value="4"></i>
+                                <i class="fas fa-star" data-value="5"></i>
+                            </div>
+                        </div>
+                        <div class="ratings-grid">
+                            <div class="rating-group">
+                                <label>Accommodation</label>
+                                <div class="star-rating" data-rating="accommodationRating">
+                                    <i class="fas fa-star" data-value="1"></i>
+                                    <i class="fas fa-star" data-value="2"></i>
+                                    <i class="fas fa-star" data-value="3"></i>
+                                    <i class="fas fa-star" data-value="4"></i>
+                                    <i class="fas fa-star" data-value="5"></i>
+                                </div>
+                            </div>
+                            <div class="rating-group">
+                                <label>Transportation</label>
+                                <div class="star-rating" data-rating="transportationRating">
+                                    <i class="fas fa-star" data-value="1"></i>
+                                    <i class="fas fa-star" data-value="2"></i>
+                                    <i class="fas fa-star" data-value="3"></i>
+                                    <i class="fas fa-star" data-value="4"></i>
+                                    <i class="fas fa-star" data-value="5"></i>
+                                </div>
+                            </div>
+                            <div class="rating-group">
+                                <label>Activities/Attractions</label>
+                                <div class="star-rating" data-rating="activitiesRating">
+                                    <i class="fas fa-star" data-value="1"></i>
+                                    <i class="fas fa-star" data-value="2"></i>
+                                    <i class="fas fa-star" data-value="3"></i>
+                                    <i class="fas fa-star" data-value="4"></i>
+                                    <i class="fas fa-star" data-value="5"></i>
+                                </div>
+                            </div>
+                            <div class="rating-group">
+                                <label>Customer Service</label>
+                                <div class="star-rating" data-rating="serviceRating">
+                                    <i class="fas fa-star" data-value="1"></i>
+                                    <i class="fas fa-star" data-value="2"></i>
+                                    <i class="fas fa-star" data-value="3"></i>
+                                    <i class="fas fa-star" data-value="4"></i>
+                                    <i class="fas fa-star" data-value="5"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Detailed Feedback -->
+                <div class="form-card">
+                    <div class="card-header">
+                        <h3>Detailed Feedback</h3>
+                        <p>Share your thoughts and suggestions</p>
+                    </div>
+                    <div class="card-content">
+                        <div class="form-group">
+                            <label for="highlights">What were the highlights of your visit?</label>
+                            <textarea id="highlights" name="highlights" rows="3" placeholder="Tell us about the best parts of your experience..."></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="improvements">What could be improved?</label>
+                            <textarea id="improvements" name="improvements" rows="3" placeholder="Share any suggestions for improvement..."></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="recommend">Would you recommend this destination?</label>
+                            <select id="recommend" name="recommend">
+                                <option value="">Select recommendation</option>
+                                <option value="definitely">Definitely</option>
+                                <option value="probably">Probably</option>
+                                <option value="maybe">Maybe</option>
+                                <option value="probably-not">Probably Not</option>
+                                <option value="definitely-not">Definitely Not</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="additionalComments">Additional Comments</label>
+                            <textarea id="additionalComments" name="additionalComments" rows="4" placeholder="Any other feedback you'd like to share..."></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="form-submit">
+                    <button type="submit" class="btn btn-primary btn-large">
+                        <i class="fas fa-paper-plane"></i>
+                        Submit Feedback
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+        <span id="toastMessage"></span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
