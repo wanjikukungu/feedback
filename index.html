@@ -3,183 +3,185 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feedback Form - Tourism Feedback Portal</title>
+    <title>FeedbackHub - Organization Feedback Platform</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <a href="index.html" class="back-link">
-                    <i class="fas fa-arrow-left"></i>
-                    <span>Back to Home</span>
-                </a>
-                <div class="separator"></div>
-                <div class="logo">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <h1>Feedback Form</h1>
+    <div class="app">
+        <!-- Header -->
+        <header class="header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo-section">
+                        <div class="logo-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <div class="logo-text">
+                            <h1>FeedbackHub</h1>
+                            <p>Organization Feedback Platform</p>
+                        </div>
+                    </div>
+                    <div class="nav-buttons">
+                        <button id="submitTab" class="nav-btn active">
+                            <i class="fas fa-comments"></i>
+                            Submit Feedback
+                        </button>
+                        <button id="dashboardTab" class="nav-btn">
+                            <i class="fas fa-chart-bar"></i>
+                            Dashboard
+                        </button>
+                    </div>
                 </div>
             </div>
-        </div>
-    </header>
+        </header>
 
-    <div class="form-container">
-        <div class="container">
-            <div class="form-header">
-                <h2>Share Your Experience</h2>
-                <p>Your feedback is valuable to us and helps improve our tourism services</p>
+        <!-- Main Content -->
+        <main class="main">
+            <div class="container">
+                <!-- Submit Feedback Section -->
+                <div id="submitSection" class="section active">
+                    <div class="welcome-section">
+                        <h2>Share Your Voice</h2>
+                        <p>Your feedback drives positive change. Help us build a better workplace for everyone.</p>
+                    </div>
+
+                    <!-- Quick Stats -->
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon blue">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h3>Anonymous</h3>
+                            <p>Your feedback can be submitted anonymously for honest input</p>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon green">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <h3>Actionable</h3>
+                            <p>Every submission is reviewed and considered for improvements</p>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon purple">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                            <h3>Transparent</h3>
+                            <p>Track the status and follow up on your feedback submissions</p>
+                        </div>
+                    </div>
+
+                    <!-- Feedback Form -->
+                    <div class="feedback-form-container">
+                        <div class="form-header">
+                            <h3><i class="fas fa-comments"></i> Submit Your Feedback</h3>
+                            <p>Your voice matters. Help us improve our organization together.</p>
+                        </div>
+                        <form id="feedbackForm" class="feedback-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">
+                                        <i class="fas fa-user"></i>
+                                        Your Name
+                                    </label>
+                                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="department">Department</label>
+                                    <select id="department" name="department" required>
+                                        <option value="">Select your department</option>
+                                        <option value="Procurement">Procurement</option>
+                                        <option value="Marketing">Marketing</option>
+                                        <option value="Admin">Admin</option>
+                                        <option value="HR">HR</option>
+                                        <option value="Finance">Finance</option>
+                                        <option value="ICT">ICT</option>
+                                        <option value="Customer Support">Customer Support</option>
+                                        <option value="Audit">Audit</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="category">
+                                        <i class="fas fa-tag"></i>
+                                        Feedback Category
+                                    </label>
+                                    <select id="category" name="category" required>
+                                        <option value="">Choose a category</option>
+                                        <option value="Workplace Environment">Workplace Environment</option>
+                                        <option value="Management & Leadership">Management & Leadership</option>
+                                        <option value="Work-Life Balance">Work-Life Balance</option>
+                                        <option value="Professional Development">Professional Development</option>
+                                        <option value="Communication">Communication</option>
+                                        <option value="Tools & Technology">Tools & Technology</option>
+                                        <option value="Company Culture">Company Culture</option>
+                                        <option value="Processes & Procedures">Processes & Procedures</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="priority">
+                                        <i class="fas fa-star"></i>
+                                        Priority Level
+                                    </label>
+                                    <select id="priority" name="priority">
+                                        <option value="low">Low Priority</option>
+                                        <option value="medium" selected>Medium Priority</option>
+                                        <option value="high">High Priority</option>
+                                        <option value="urgent">Urgent</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" placeholder="Brief summary of your feedback" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Your Feedback</label>
+                                <textarea id="message" name="message" rows="6" placeholder="Please share your detailed feedback, suggestions, or concerns..." required></textarea>
+                            </div>
+
+                            <button type="submit" class="submit-btn">
+                                <i class="fas fa-paper-plane"></i>
+                                Submit Feedback
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Dashboard Section -->
+                <div id="dashboardSection" class="section">
+                    <div class="welcome-section">
+                        <h2>Feedback Dashboard</h2>
+                        <p>Monitor and manage organization feedback to drive meaningful improvements.</p>
+                    </div>
+
+                    <div id="feedbackList" class="feedback-list">
+                        <!-- Feedback items will be populated by JavaScript -->
+                    </div>
+                </div>
             </div>
+        </main>
 
-            <form id="feedbackForm" class="feedback-form">
-                <!-- Personal Information -->
-                <div class="form-card">
-                    <div class="card-header">
-                        <h3>Personal Information</h3>
-                        <p>Tell us a bit about yourself</p>
-                    </div>
-                    <div class="card-content">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="name">Full Name *</label>
-                                <input type="text" id="name" name="name" required placeholder="Enter your full name">
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email Address *</label>
-                                <input type="email" id="email" name="email" required placeholder="Enter your email">
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="visitDate">Visit Date</label>
-                                <input type="date" id="visitDate" name="visitDate">
-                            </div>
-                            <div class="form-group">
-                                <label for="visitPurpose">Purpose of Visit</label>
-                                <select id="visitPurpose" name="visitPurpose">
-                                    <option value="">Select purpose</option>
-                                    <option value="leisure">Leisure/Vacation</option>
-                                    <option value="business">Business</option>
-                                    <option value="family">Family Visit</option>
-                                    <option value="adventure">Adventure/Sports</option>
-                                    <option value="cultural">Cultural/Historical</option>
-                                    <option value="other">Other</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <p>&copy; 2024 FeedbackHub. Building better organizations through listening.</p>
+            </div>
+        </footer>
 
-                <!-- Ratings -->
-                <div class="form-card">
-                    <div class="card-header">
-                        <h3>Rate Your Experience</h3>
-                        <p>Please rate different aspects of your visit</p>
-                    </div>
-                    <div class="card-content">
-                        <div class="rating-group">
-                            <label>Overall Experience *</label>
-                            <div class="star-rating" data-rating="overallRating">
-                                <i class="fas fa-star" data-value="1"></i>
-                                <i class="fas fa-star" data-value="2"></i>
-                                <i class="fas fa-star" data-value="3"></i>
-                                <i class="fas fa-star" data-value="4"></i>
-                                <i class="fas fa-star" data-value="5"></i>
-                            </div>
-                        </div>
-                        <div class="ratings-grid">
-                            <div class="rating-group">
-                                <label>Accommodation</label>
-                                <div class="star-rating" data-rating="accommodationRating">
-                                    <i class="fas fa-star" data-value="1"></i>
-                                    <i class="fas fa-star" data-value="2"></i>
-                                    <i class="fas fa-star" data-value="3"></i>
-                                    <i class="fas fa-star" data-value="4"></i>
-                                    <i class="fas fa-star" data-value="5"></i>
-                                </div>
-                            </div>
-                            <div class="rating-group">
-                                <label>Transportation</label>
-                                <div class="star-rating" data-rating="transportationRating">
-                                    <i class="fas fa-star" data-value="1"></i>
-                                    <i class="fas fa-star" data-value="2"></i>
-                                    <i class="fas fa-star" data-value="3"></i>
-                                    <i class="fas fa-star" data-value="4"></i>
-                                    <i class="fas fa-star" data-value="5"></i>
-                                </div>
-                            </div>
-                            <div class="rating-group">
-                                <label>Activities/Attractions</label>
-                                <div class="star-rating" data-rating="activitiesRating">
-                                    <i class="fas fa-star" data-value="1"></i>
-                                    <i class="fas fa-star" data-value="2"></i>
-                                    <i class="fas fa-star" data-value="3"></i>
-                                    <i class="fas fa-star" data-value="4"></i>
-                                    <i class="fas fa-star" data-value="5"></i>
-                                </div>
-                            </div>
-                            <div class="rating-group">
-                                <label>Customer Service</label>
-                                <div class="star-rating" data-rating="serviceRating">
-                                    <i class="fas fa-star" data-value="1"></i>
-                                    <i class="fas fa-star" data-value="2"></i>
-                                    <i class="fas fa-star" data-value="3"></i>
-                                    <i class="fas fa-star" data-value="4"></i>
-                                    <i class="fas fa-star" data-value="5"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Detailed Feedback -->
-                <div class="form-card">
-                    <div class="card-header">
-                        <h3>Detailed Feedback</h3>
-                        <p>Share your thoughts and suggestions</p>
-                    </div>
-                    <div class="card-content">
-                        <div class="form-group">
-                            <label for="highlights">What were the highlights of your visit?</label>
-                            <textarea id="highlights" name="highlights" rows="3" placeholder="Tell us about the best parts of your experience..."></textarea>
-                        </div>
-                        <div class="form-group">
-                            <label for="improvements">What could be improved?</label>
-                            <textarea id="improvements" name="improvements" rows="3" placeholder="Share any suggestions for improvement..."></textarea>
-                        </div>
-                        <div class="form-group">
-                            <label for="recommend">Would you recommend this destination?</label>
-                            <select id="recommend" name="recommend">
-                                <option value="">Select recommendation</option>
-                                <option value="definitely">Definitely</option>
-                                <option value="probably">Probably</option>
-                                <option value="maybe">Maybe</option>
-                                <option value="probably-not">Probably Not</option>
-                                <option value="definitely-not">Definitely Not</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="additionalComments">Additional Comments</label>
-                            <textarea id="additionalComments" name="additionalComments" rows="4" placeholder="Any other feedback you'd like to share..."></textarea>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Submit Button -->
-                <div class="form-submit">
-                    <button type="submit" class="btn btn-primary btn-large">
-                        <i class="fas fa-paper-plane"></i>
-                        Submit Feedback
-                    </button>
-                </div>
-            </form>
+        <!-- Toast Notification -->
+        <div id="toast" class="toast">
+            <div class="toast-content">
+                <i class="fas fa-check-circle"></i>
+                <span id="toastMessage"></span>
+            </div>
         </div>
-    </div>
-
-    <!-- Toast Notification -->
-    <div id="toast" class="toast">
-        <span id="toastMessage"></span>
     </div>
 
     <script src="script.js"></script>
