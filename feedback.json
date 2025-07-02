@@ -38,5 +38,15 @@
         "priority": "urgent",
         "timestamp": "2025-07-01T12:22:03.896Z",
         "status": "new"
+    },
+    {
+        "name": "",
+        "department": "Research & strategy",
+        "category": "Work-Life Balance",
+        "subject": "asdfg",
+        "message": "asfhjp[;hxlsslh",
+        "priority": "medium",
+        "timestamp": "2025-07-02T11:52:36.054Z",
+        "status": "new"
     }
 ]
