@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FeedbackHub - Organization Feedback Platform</title>
-    <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
@@ -22,6 +22,7 @@
                             <p>Organization Feedback Platform</p>
                         </div>
                     </div>
+                    <button id="adminLoginBtn" class="admin-login-btn">Login as Admin</button>
                     <div class="nav-buttons">
                         <button id="submitTab" class="nav-btn active">
                             <i class="fas fa-comments"></i>
@@ -77,14 +78,15 @@
                             <h3><i class="fas fa-comments"></i> Submit Your Feedback</h3>
                             <p>Your voice matters. Help us improve our organization together.</p>
                         </div>
-                        <form id="feedbackForm" class="feedback-form">
+                     <form id="feedbackForm" class="feedback-form" form action="backend/submit.php" method="POST">
+
                             <div class="form-row">
                                 <div class="form-group">
                                     <label for="name">
                                         <i class="fas fa-user"></i>
                                         Your Name
                                     </label>
-                                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                                    <input type="text" id="name" name="name" placeholder="Enter your full name" >
                                 </div>
                                 <div class="form-group">
                                     <label for="department">Department</label>
@@ -98,6 +100,7 @@
                                         <option value="ICT">ICT</option>
                                         <option value="Customer Support">Customer Support</option>
                                         <option value="Audit">Audit</option>
+                                        <option value="Research & strategy">Research & strategy</option>
                                         <option value="Other">Other</option>
                                     </select>
                                 </div>
@@ -184,6 +187,6 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>

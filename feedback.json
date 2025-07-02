@@ -1,0 +1,42 @@
+[
+    {
+        "name": "qwertyui",
+        "department": "Research & strategy",
+        "category": "Processes & Procedures",
+        "subject": "wertyishg",
+        "message": "asfghjf",
+        "priority": "high",
+        "timestamp": "2025-07-01T11:39:48.018Z",
+        "status": "new"
+    },
+    {
+        "name": "qwertyui",
+        "department": "Research & strategy",
+        "category": "Tools & Technology",
+        "subject": "wertyishg",
+        "message": "HJ;'WHJ/ETRDYHB3WAVEF",
+        "priority": "low",
+        "timestamp": "2025-07-01T11:49:56.933Z",
+        "status": "new"
+    },
+    {
+        "name": "",
+        "department": "Research & strategy",
+        "category": "Management & Leadership",
+        "subject": "2r",
+        "message": "tyuioi",
+        "priority": "medium",
+        "timestamp": "2025-07-01T12:14:27.721Z",
+        "status": "new"
+    },
+    {
+        "name": "",
+        "department": "Marketing",
+        "category": "Work-Life Balance",
+        "subject": "sdhmh",
+        "message": "zxcvbndbncbfmgb",
+        "priority": "urgent",
+        "timestamp": "2025-07-01T12:22:03.896Z",
+        "status": "new"
+    }
+]

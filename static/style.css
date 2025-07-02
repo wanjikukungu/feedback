@@ -428,3 +428,13 @@ body {
         left: 1rem;
     }
 }
+.admin-login-btn {
+  margin: 10px 0;
+  padding: 0.5rem 1rem;
+  background-color: #1f2937;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
