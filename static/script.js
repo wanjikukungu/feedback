@@ -51,7 +51,7 @@ feedbackForm.addEventListener('submit', async (e) => {
     };
 
     try {
-        const response = await fetch('http://127.0.0.1:5000/submit', {
+        const response = await fetch('/submit', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -77,7 +77,7 @@ feedbackForm.addEventListener('submit', async (e) => {
 function loadFeedbackData() {
     const feedbackList = document.getElementById('feedbackList');
 
-    fetch('http://127.0.0.1:5000/admin/feedback')
+    fetch('/admin/feedback')
         .then(response => response.json())
         .then(feedback => {
             if (feedback.length === 0) {
@@ -153,6 +153,7 @@ function getPriorityIcon(priority) {
             return '<i class="fas fa-star"></i>';
     }
 }
+
 // Hide the dashboard tab initially
 document.getElementById('dashboardTab').style.display = 'none';
 
